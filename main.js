@@ -4,14 +4,16 @@ for(let i=0;i<allButtons.length;i++){
     var index=$(x.currentTarget).index()
     //x.currentTarget 改成 allButtons[i] 也可以
     //index()输出该子项的index
-    var n=index*-300
+    var p=index*-300
     $('#images').css({
-      transform:'translate('+n+'px)'
+      transform:'translate('+p+'px)'
     })
     //css这一句实际上控制的是style，而且css里面的是个对象，不可用css的语法
     //translate 写成 translateX 也可以
     //而且这一句写成 'margin-left':'-300px' 也可以，注意属性名中有特殊字符'-'，应加上引号
-    activeB(allButtons.eq(index))
+    n=index
+    //注意，这个n是为了跟下面的n保持一致，否则点击按钮能使图片发生变化，但之后仍按原先图片轮播的顺序进行，只爽一下
+    activeB(allButtons.eq(n))
     //eq()的作用是取出index为n的对象，并将其转化为jQuery对象
   })
 }
