@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+  <meta charset="utf-8">
+  <style>
+    .images{
+      display:flex;
+      /*弹性布局，默认放为一行*/
+      align-items: flex-start;
+      /*这一句表示各张图靠上对齐*/
+      /*上面这两句改用float布局也可以*/
+      /*但float较麻烦，float left+clear*/
+      transition:all 1s;
+    }
+    .window{
+      border:10px solid green;
+      width:300px;
+      overflow:hidden;
+    }
+  </style>
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class='window'>
+    <div class='images' id=images>
+      <img src="https://fthmb.tqn.com/0ui_Zw01Ht9NHJkSBlqOIC1IH44=/960x0/filters:no_upscale()/yorkshire-terrier-583788122-581630e85f9b581c0b018a00.jpg" width=300px>
+      <!--alt是占位符-->
+      <img src="https://canna-pet.com/wp-content/uploads/2017/06/20-longest-living-dog-breeds_canna-pet-e1498599846169.jpg" width=300px>
+      <img src="https://fthmb.tqn.com/0ui_Zw01Ht9NHJkSBlqOIC1IH44=/960x0/filters:no_upscale()/yorkshire-terrier-583788122-581630e85f9b581c0b018a00.jpg" width=300px>
+    </div>
+  </div>
+  <span id=buttons>
+    <!--这里buttons似乎带不带引号均可-->
+    <span>第一张</span>
+    <span>第二张</span>
+    <span>第三张</span>
+  </span>
+  <script src="main.js"></script>
+</body>
+</html>
